@@ -1,0 +1,12 @@
+package operations;
+
+import entity.Account;
+
+public class AccountOperations {
+
+	public boolean withdraw(Account account,double amount)
+	{
+		return false;
+		
+	}
+}

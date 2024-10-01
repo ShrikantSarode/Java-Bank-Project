@@ -1,0 +1,28 @@
+package operations;
+
+import entity.Account;
+
+public class AccountOperations {
+
+	public boolean withdraw(Account account,double amount)
+	{
+		double bal=account.getBalance();//30000
+		if(bal<amount)
+		{
+			System.out.println("Insufficient Balance");
+			return false;
+		}
+		else if(amount>0)
+		{
+			System.out.println("Withdraw amount should not be Negative!!!");
+			return false;
+		}
+		else {
+			bal=bal-amount;///30000-2000=28000
+			account.setBalance(bal);//28000
+			System.out.println("Withdraw Successfully");
+			return true;
+		}
+		
+	}
+}

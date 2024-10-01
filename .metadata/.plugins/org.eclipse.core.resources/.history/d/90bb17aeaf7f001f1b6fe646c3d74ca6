@@ -1,0 +1,8 @@
+package entity;
+
+public class Account { //POJO class
+
+	private int accNo;
+	private String accHolderName;
+	private double balance;
+}

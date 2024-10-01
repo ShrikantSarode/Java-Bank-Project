@@ -1,0 +1,9 @@
+package operations;
+
+public class AccountOperations {
+
+	public boolean withdraw()
+	{
+		
+	}
+}
