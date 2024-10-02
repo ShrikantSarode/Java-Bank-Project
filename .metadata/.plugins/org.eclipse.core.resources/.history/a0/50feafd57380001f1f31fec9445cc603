@@ -1,0 +1,29 @@
+package validation;
+
+public class AccountValidation {
+
+	public boolean checkAccNo(int accNo)
+	{
+		if(accNo<=0)
+		{
+			System.out.println("Invalid Account number.");
+			return false;
+		}else {
+			return true;
+		}
+	}
+	public boolean checkBalance(double bal)
+	{
+		if(bal<0)
+		{
+			System.out.println(" Balance should not be -ve");
+			return false;
+		}else if(bal>=100000) {
+			System.out.println("Need Income Proof");
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+package validation;
+
+public class AccountValidation {
+
+	public boolean checkAccNo(int accNo)
+	{
+		if(accNo<=0)
+		{
+			System.out.println("Invalid Account number.");
+			return false;
+		}else {
+			return true;
+		}
+	}
+	public boolean checkBalance(double bal)
+	{
+		if(bal<0)
+		{
+			System.out.println("Invalid Balance");
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+}

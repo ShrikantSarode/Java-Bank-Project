@@ -1,16 +1,18 @@
 package userinterface;
-
+import validation.AccountValidation;
 import java.util.Scanner;
 import operations.AccountOperations;
+import validation.AccountValidation;
 import entity.Account;
 
 public class TestAccount {
 
 	public static void main(String[] args) {
 
-		Account account1 = new Account(1, "Shrikant", 30000);
+		Account account1 = new Account();
 		Account account2 = new Account(2, "Ajay", 40000);
 		AccountOperations accountOperations = new AccountOperations();
+		AccountValidation accountValidation= new AccountValidation();
 
 		int ch;
 		String choice;
@@ -26,7 +28,8 @@ public class TestAccount {
 			System.out.println("5.Transfer Amount");
 			System.out.println("6.Check Balance");
 			System.out.println("7.Update Balance");
-			System.out.println("8.Exit");
+			System.out.println("8.Update Balance");
+			System.out.println("9.Exit");
 
 			System.out.println("Enter your choice: ");
 			ch = sc.nextInt();
@@ -34,7 +37,23 @@ public class TestAccount {
 			switch (ch) {
 
 			case 1:
-				System.out.println("1.Accept Details");
+				System.out.println("1.Enter accNo,HolderName and balance: ");
+				int accNo=sc.nextInt();
+				String accHolderName=sc.next();
+				double bal=sc.nextDouble();
+				
+				//validating this 1/ps
+				boolean result2=accountValidation.checkAll(accNo, bal, accHolderName);
+				if(result2==true)
+				{
+					System.out.println("all inputs are Valid");
+					account1.setAccNo(accNo);
+					account1.setAccHolderName(accHolderName);
+					account1.setBalance(bal);
+				}else {
+					System.out.println("Invalid inputs....");
+				}
+				
 				break;
 
 			case 2:
@@ -95,8 +114,12 @@ public class TestAccount {
 			case 7:
 				System.out.println("7.Update Balance");
 				break;
-
+				
 			case 8:
+				System.out.println("7.Enter Email");
+				break;
+
+			case 9:
 				System.out.println("Closed");
 				System.exit(0);
 			}

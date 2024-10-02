@@ -1,0 +1,35 @@
+package validation;
+
+import java.util.Scanner;
+
+public class EmailValidation {
+	
+	public void checkEmail(String email)
+	{
+		if(a!=-1 && a<d && d!=-1)
+		{
+			System.out.println("valid");
+		}
+		else {
+			System.out.println("Invalid");
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Email: ");
+		String email=sc.next();
+		
+		int a=email.indexOf('@');
+		
+		int d=email.indexOf('.');
+		
+		System.out.println(a);
+		System.out.println(d);
+		EmailValidation emailValidation=new EmailValidation();
+		emailValidation.checkEmail(email);
+		
+		
+	}
+	 
+}
