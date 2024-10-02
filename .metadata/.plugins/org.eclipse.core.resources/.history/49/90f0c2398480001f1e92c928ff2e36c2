@@ -128,7 +128,7 @@ public class TestAccount {
 
 			case 7:
 				System.out.println("=========================================");
-				System.out.println("Enter the new Balance: ");
+				System.out.println("Enter the new Balance");
 				bal=sc.nextDouble();
 				account1.setBalance(bal);
 				System.out.println("Updated the balance");

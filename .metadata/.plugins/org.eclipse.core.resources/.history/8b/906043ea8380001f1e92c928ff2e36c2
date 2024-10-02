@@ -86,7 +86,6 @@ public class TestAccount {
 				break;
 
 			case 5:
-				System.out.println("=========================================");
 				System.out.println("5.Transfer Amount from Account_1 to Account_2 ");
 				System.out.println("1.Enter accNo,HolderName and balance: ");
 				accNo = sc.nextInt();
@@ -117,22 +116,18 @@ public class TestAccount {
 				} else {
 					System.out.println("Transfer Failed ): ");
 				}
-				System.out.println("=========================================");
 				break;
 
 			case 6:
-				System.out.println("=========================================");
 				System.out.println("The balance is "+ account1.getBalance());
-				System.out.println("=========================================");
+				
 				break;
 
 			case 7:
-				System.out.println("=========================================");
-				System.out.println("Enter the new Balance: ");
+				System.out.println("Enter the new Balance");
 				bal=sc.nextDouble();
 				account1.setBalance(bal);
 				System.out.println("Updated the balance");
-				System.out.println("=========================================");
 				break;
 
 			case 8:

@@ -86,19 +86,19 @@ public class TestAccount {
 				break;
 
 			case 5:
-				System.out.println("=========================================");
 				System.out.println("5.Transfer Amount from Account_1 to Account_2 ");
 				System.out.println("1.Enter accNo,HolderName and balance: ");
 				accNo = sc.nextInt();
 				accHolderName = sc.next();
 				bal = sc.nextDouble();
 
+				// validating this 1/ps
 				result2 = accountValidation.checkAll(accNo, bal, accHolderName);
 				if (result2 == true) {
 					System.out.println("all inputs are Valid");
-					account2.setAccNo(accNo);
-					account2.setAccHolderName(accHolderName);
-					account2.setBalance(bal);
+					account1.setAccNo(accNo);
+					account1.setAccHolderName(accHolderName);
+					account1.setBalance(bal);
 				} else {
 					System.out.println("Invalid inputs....");
 				}
@@ -117,22 +117,17 @@ public class TestAccount {
 				} else {
 					System.out.println("Transfer Failed ): ");
 				}
-				System.out.println("=========================================");
 				break;
 
 			case 6:
-				System.out.println("=========================================");
-				System.out.println("The balance is "+ account1.getBalance());
-				System.out.println("=========================================");
+				System.out.println("6.Check Balance");
+				System.out.println("Acc no 1 balance: " + account1.getBalance());
+				System.out.println("Acc no 2 balance: " + account2.getBalance());
+
 				break;
 
 			case 7:
-				System.out.println("=========================================");
-				System.out.println("Enter the new Balance: ");
-				bal=sc.nextDouble();
-				account1.setBalance(bal);
-				System.out.println("Updated the balance");
-				System.out.println("=========================================");
+				System.out.println("7.Update Balance");
 				break;
 
 			case 8:
